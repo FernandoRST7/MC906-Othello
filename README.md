@@ -1,24 +1,24 @@
 # Othello AI Agent
 
-Este repositório contém a implementação de um agente de inteligência artificial para o jogo Othello, desenvolvido como trabalho prático para a disciplina **MC906 - Introdução à Inteligência Artificial** na UNICAMP (Abril/2026)[cite: 2, 3, 16].
+Este repositório contém a implementação de um agente de inteligência artificial para o jogo Othello, desenvolvido como trabalho prático para a disciplina **MC906 - Introdução à Inteligência Artificial** na UNICAMP (Abril/2026).
 
-O projeto explora a comparação entre diferentes heurísticas e técnicas de busca para a tomada de decisão em um jogo de soma zero[cite: 52].
+O projeto explora a comparação entre diferentes heurísticas e técnicas de busca para a tomada de decisão em um jogo de soma zero.
 
 ## Principais Funcionalidades
 
-* **Algoritmo de Busca**: Implementação do **Minimax** integrado com poda **Alfa-Beta** para redução do espaço de estados[cite: 53, 58].
-* **Busca Iterativa**: Uso de *Iterative Deepening* para contornar limites de tempo (0.95s por jogada) e garantir uma decisão válida[cite: 69, 70].
-* **Ordenação de Jogadas**: Estratégia que pré-avalia movimentos para maximizar a eficiência da poda Alfa-Beta[cite: 64, 65].
+* **Algoritmo de Busca**: Implementação do **Minimax** integrado com poda **Alfa-Beta** para redução do espaço de estados.
+* **Busca Iterativa**: Uso de *Iterative Deepening* para contornar limites de tempo (0.95s por jogada) e garantir uma decisão válida.
+* **Ordenação de Jogadas**: Estratégia que pré-avalia movimentos para maximizar a eficiência da poda Alfa-Beta.
 * **Heurísticas**:
-    * **Greedy (Gulosa)**: Baseline baseada no saldo material (diferença de peças)[cite: 81].
-    * **Static (Posicional Estática)**: Baseada em uma matriz de pesos 8x8 que valoriza o controle territorial e cantos[cite: 85, 86].
-    * **Dynamic (Dinâmica)**: Combinação linear de saldo, mapa posicional e métrica de mobilidade, com pesos ajustados para o início, meio e fim de jogo[cite: 92, 94, 95, 96].
+    * **Greedy (Gulosa)**: Baseline baseada no saldo material (diferença de peças).
+    * **Static (Posicional Estática)**: Baseada em uma matriz de pesos 8x8 que valoriza o controle territorial e cantos.
+    * **Dynamic (Dinâmica)**: Combinação linear de saldo, mapa posicional e métrica de mobilidade, com pesos ajustados para o início, meio e fim de jogo.
 
 ## Resultados Experimentais
 
-* **Poda Alfa-Beta**: Permitiu explorar profundidades maiores no mesmo intervalo de tempo, superando o Minimax puro (ex: 12.23 contra 9.00 camadas)[cite: 106].
-* **Desempenho**: A heurística **Static** obteve o melhor desempenho, derrotando a *Dynamic* em 79.2% das partidas e o *baseline (Greedy)* em 95.8%[cite: 111, 126].
-* **Complexidade**: O gargalo computacional reside na geração e verificação de novos movimentos, sendo que o *mid-game* apresenta a maior dificuldade de processamento[cite: 151, 166].
+* **Poda Alfa-Beta**: Permitiu explorar profundidades maiores no mesmo intervalo de tempo, superando o Minimax puro (ex: 12.23 contra 9.00 camadas).
+* **Desempenho**: A heurística **Static** obteve o melhor desempenho, derrotando a *Dynamic* em 79.2% das partidas e o *baseline (Greedy)* em 95.8%.
+* **Complexidade**: O gargalo computacional reside na geração e verificação de novos movimentos, sendo que o *mid-game* apresenta a maior dificuldade de processamento.
 
 ## Como Executar
 
